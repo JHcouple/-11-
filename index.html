@@ -270,8 +270,7 @@
           <h2>🎥 영상 – 온라인 수익 실험 브이로그</h2>
           <div class="video-placeholder">
             여기에는 유튜브/릴스 영상이 들어갈 예정입니다.<br /><br />
-            유튜브에 영상 업로드 후<br />
-            <span class="small">iframe embed 코드를 이 박스 안에 붙여넣으면 됩니다.</span>
+            <span class="small">유튜브 embed 코드를 이 박스 안에 붙여넣으면 됩니다.</span>
           </div>
         </section>
 
@@ -290,14 +289,34 @@
           </div>
         </section>
 
-        <!-- AUTO LIST PLACEHOLDER -->
+        <!-- COUPANG DYNAMIC BANNER -->
+        <section class="section">
+          <h2>🛍 자동 추천 상품</h2>
+          <p class="small">쿠팡 파트너스 자동 추천 배너입니다.</p>
+
+          <!-- 🔥 여기가 자동 배너 삽입 영역 -->
+          <script src="https://ads-partners.coupang.com/g.js"></script>
+          <script>
+            new PartnersCoupang.G({
+              "id": 944627,
+              "template": "carousel",
+              "trackingCode": "AF5786108",
+              "width": "680",
+              "height": "200",
+              "tsource": ""
+            });
+          </script>
+        </section>
+
+        <!-- AUTO LIST FUTURE -->
         <section class="section">
           <h2>🧩 자동 업데이트 리스트(예정)</h2>
           <p class="small">
-            추후 Google Sheets + 스크립트로<br />
-            <strong>가격 변동 / 할인 / 인기템</strong>이 자동으로 업데이트되는 영역입니다.
+            Google Sheets + 스크립트로<br />
+            <strong>가격 변동 / 할인 / 인기템</strong>이 자동 업데이트될 예정입니다.
           </p>
         </section>
+
       </div>
     </div>
 
