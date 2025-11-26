@@ -1,311 +1,120 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>11평에서 다시 시작한 남자 – 온라인 수익 허브</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>하루 기록 – 11평에서 다시 시작한 남자</title>
 
-  <style>
-    :root {
-      --bg: #f5f5f7;
-      --card: #ffffff;
-      --text-main: #111111;
-      --text-sub: #555555;
-      --accent: #111111;
-      --border: #e2e2e7;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
-    }
-
-    .wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 32px 16px 80px;
-    }
-
-    header {
-      padding: 24px 20px 32px;
-      margin-bottom: 24px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #111111, #3b3b3b);
-      color: #ffffff;
-    }
-
-    header h1 {
-      margin: 0 0 8px;
-      font-size: 28px;
-    }
-
-    header p {
-      margin: 0 0 16px;
-      color: #e5e5e5;
-      line-height: 1.6;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      font-size: 12px;
-      margin-bottom: 8px;
-    }
-
-    .btn-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .btn, .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      text-decoration: none;
-      cursor: pointer;
-      border: 1px solid transparent;
-    }
-
-    .btn {
-      background: #ffffff;
-      color: #111111;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #ffffff;
-      border-color: rgba(255,255,255,0.4);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 24px;
-    }
-
-    .section {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 20px 18px;
-      border: 1px solid var(--border);
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 18px;
-      margin: 0 0 10px;
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 1.7;
-      color: var(--text-sub);
-    }
-
-    .story-body {
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .tag {
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #f2f2f5;
-      color: #555;
-    }
-
-    .video-placeholder {
-      border-radius: 12px;
-      border: 1px dashed #d2d2d8;
-      padding: 20px;
-      font-size: 13px;
-      color: #777;
-      text-align: center;
-    }
-
-    .product-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 10px;
-    }
-
-    .product-card {
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 12px 12px 14px;
-      background: #fafafa;
-      font-size: 13px;
-    }
-
-    .product-card h3 {
-      margin: 0 0 4px;
-      font-size: 14px;
-      color: #111;
-    }
-
-    .product-meta {
-      font-size: 12px;
-      color: #777;
-      margin-bottom: 6px;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #999;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .wrap { padding: 20px 16px 60px; }
-      header { padding: 20px 16px 26px; }
-      header h1 { font-size: 22px; }
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
+<style>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f5f7;
+    color: #111;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 30px 16px 60px;
+  }
+  h1 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+  .log-box {
+    background:#fff;
+    padding:16px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    margin-bottom:24px;
+  }
+  textarea {
+    width: 100%;
+    height: 90px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 14px;
+  }
+  button {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background:#111;
+    color:#fff;
+    font-size:14px;
+    cursor:pointer;
+  }
+  .entry {
+    background:#fff;
+    padding:14px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    margin-bottom:12px;
+  }
+  .date {
+    font-size:12px;
+    color:#777;
+    margin-bottom:6px;
+  }
+</style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
+  <h1>✏️ 하루 기록</h1>
+  <p style="color:#555; font-size:14px; margin-bottom:20px;">
+    하루하루 실행한 내용을 기록합니다. (자동 날짜 표시)
+  </p>
 
-    <!-- HEADER -->
-    <header>
-      <div class="badge">온라인 수익 다각화 / 25년 11월 15일 ~ ing </div>
-      <h1>11평에서 다시 시작한 남자</h1>
-      <p>
-        한때는 한 달에 남들 1년치 연봉을 벌었지만,<br />
-        지금은 11평 원룸에서 다시 온라인으로 다시 올라가는 과정을 기록합니다.
-      </p>
-      <div class="btn-row">
-        <a href="#story" class="btn">스토리 먼저 보기</a>
-        <a href="#products" class="btn-outline">실제 사용템 보기</a>
-      </div>
-    </header>
-
-    <div class="grid">
-
-      <!-- LEFT SIDE -->
-      <div>
-
-        <!-- STORY SECTION -->
-        <section id="story" class="section">
-          <h2>📘 왜 다시 시작하게 됐나</h2>
-          <div class="story-body">
-            결혼 전에는 사업도, 투자도, 재테크도 잘 굴러갔습니다.  
-            매달 웬만한 사람의 연봉을 벌면서, 이 길만 쭉 갈 줄 알았죠.<br /><br />
-            하지만 사업과 투자가 동시에 무너지면서,<br />
-            지금은 11평 원룸에서 다시 시작하고 있습니다.<br /><br />
-            이 페이지는<br />
-            <strong>0원에서 다시 수익 구조를 만드는 전 과정을 기록하는 퍼블릭 허브</strong>입니다.
-          </div>
-        </section>
-
-        <!-- PRODUCTS SECTION -->
-        <section id="products" class="section">
-          <h2>🛒 11평 생활 · 작업 · 촬영템</h2>
-          
-          <p class="small">
-            아래 링크는 "쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
-          </p>
-          <p class="small">제가 실제로 써보고 도움됐던 제품만 추천합니다.</p>
-
-          <div class="product-list">
-
-            <!-- ★ 남겨둔 유일한 상품 카드 -->
-            <div class="product-card">
-              <h3>작업용 스탠드 조명</h3>
-              <div class="product-meta">방 분위기 & 촬영 퀄리티 동시에 업</div>
-              <p>야간 편집할 때 눈 피로 줄여주고, 브이로그 촬영에도 사용 중.</p>
-              <a href="https://link.coupang.com/a/c74YPt" target="_blank" rel="noopener noreferrer">
-                쿠팡에서 보기 →
-              </a>
-            </div>
-
-          </div>
-        </section>
-
-      </div>
-
-      <!-- RIGHT SIDE -->
-      <div>
-
-        <!-- VIDEO -->
-        <section class="section">
-          <h2>🎥 영상 – 온라인 수익 실험 브이로그</h2>
-
-          <div class="video-placeholder">
-            <iframe 
-              width="100%" 
-              height="315"
-              src="https://www.youtube.com/embed/w88WMU50V2U?si=fawuwVAxBmV6gZTI"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </section>
-
-        <!-- QUICK LINKS -->
-        <section class="section">
-          <h2>🔗 빠른 이동</h2>
-          <ul class="small">
-            <li>온라인 수익 0 → 30만원 프로젝트</li>
-            <li>쿠팡 파트너스 자동화 실험</li>
-            <li>쇼츠·릴스 실험 기록</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag">#11평에서다시시작</span>
-            <span class="tag">#퍼블릭빌딩</span>
-            <span class="tag">#온라인수익실험실</span>
-          </div>
-        </section>
-
-        <!-- COUPANG BANNER -->
-        <section class="section">
-          <h2>🛍 자동 추천 상품</h2>
-          <p class="small">쿠팡 파트너스 자동 추천 배너입니다.</p>
-
-          <script src="https://ads-partners.coupang.com/g.js"></script>
-          <script>
-            new PartnersCoupang.G({
-              "id": 944627,
-              "template": "carousel",
-              "trackingCode": "AF5786108",
-              "width": "680",
-              "height": "200",
-              "tsource": ""
-            });
-          </script>
-        </section>
-
-      </div>
-    </div>
-
-    <footer>
-      © 11평에서 다시 시작한 남자 · Online Income Lab
-    </footer>
-
+  <div class="log-box">
+    <textarea id="dailyText" placeholder="오늘 무엇을 실행했나요?"></textarea>
+    <button onclick="saveDaily()">기록 저장하기</button>
   </div>
+
+  <h2 style="font-size:18px; margin-bottom:12px;">📚 전체 기록</h2>
+  <div id="logList"></div>
+</div>
+
+<script>
+  // 저장 기능
+  function saveDaily() {
+    const text = document.getElementById("dailyText").value.trim();
+    if (!text) return alert("내용을 입력하세요!");
+
+    const now = new Date();
+    const timestamp =
+      `${now.getFullYear()}.${now.getMonth()+1}.${now.getDate()} ` +
+      `${now.getHours().toString().padStart(2,"0")}:${now.getMinutes().toString().padStart(2,"0")}`;
+
+    const entry = { text, timestamp };
+
+    // LocalStorage에 저장
+    let logs = JSON.parse(localStorage.getItem("dailyLogs") || "[]");
+    logs.unshift(entry);
+    localStorage.setItem("dailyLogs", JSON.stringify(logs));
+
+    document.getElementById("dailyText").value = "";
+    renderLogs();
+  }
+
+  // 렌더링
+  function renderLogs() {
+    const list = document.getElementById("logList");
+    let logs = JSON.parse(localStorage.getItem("dailyLogs") || "[]");
+
+    list.innerHTML = logs.map(log => `
+      <div class="entry">
+        <div class="date">${log.timestamp}</div>
+        <div>${log.text}</div>
+      </div>
+    `).join("");
+  }
+
+  renderLogs();
+</script>
+
 </body>
 </html>
