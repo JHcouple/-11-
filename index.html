@@ -64,7 +64,7 @@
       flex-wrap: wrap;
     }
 
-    .btn, .btn-outline {
+    .btn, .btn-outline, .btn-dark {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -85,6 +85,11 @@
       background: transparent;
       color: #ffffff;
       border-color: rgba(255,255,255,0.4);
+    }
+
+    .btn-dark {
+      background: #111111;
+      color: #ffffff;
     }
 
     .grid {
@@ -168,6 +173,21 @@
       margin-bottom: 6px;
     }
 
+    /* 하루 기록 박스 추가 */
+    .daily-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: 14px;
+      margin-top: 14px;
+    }
+
+    .daily-box h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      color: #111;
+    }
+
     footer {
       margin-top: 40px;
       font-size: 12px;
@@ -198,6 +218,7 @@
       <div class="btn-row">
         <a href="#story" class="btn">스토리 먼저 보기</a>
         <a href="#products" class="btn-outline">실제 사용템 보기</a>
+        <a href="daily-log.html" class="btn-dark">하루 기록 보기</a>
       </div>
     </header>
 
@@ -229,8 +250,7 @@
           <p class="small">제가 실제로 써보고 도움됐던 제품만 추천합니다.</p>
 
           <div class="product-list">
-
-            <!-- ★ 남겨둔 유일한 상품 카드 -->
+            <!-- 단일 남긴 상품 -->
             <div class="product-card">
               <h3>작업용 스탠드 조명</h3>
               <div class="product-meta">방 분위기 & 촬영 퀄리티 동시에 업</div>
@@ -239,8 +259,19 @@
                 쿠팡에서 보기 →
               </a>
             </div>
-
           </div>
+
+          <!-- 하루 기록 박스 추가 -->
+          <div class="daily-box">
+            <h3>📒 하루 실행 기록</h3>
+            <p style="margin: 0 0 10px; color:#555;">
+              내가 오늘 무엇을 실행했는지 기록하는 공간입니다.
+            </p>
+            <a href="daily-log.html" class="btn-dark" style="font-size:13px; padding:8px 14px; border-radius:8px;">
+              하루 기록 보러가기 →
+            </a>
+          </div>
+
         </section>
 
       </div>
