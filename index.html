@@ -1,78 +1,361 @@
-<!-- STORY -->
-<section id="story" class="section">
-  <h2>📘 왜 다시 시작하게 됐나</h2>
-  <div class="story-body">
-    결혼 전에는 사업도, 투자도, 재테크도 잘 굴러갔습니다.  
-    매달 왠만한 사람의 연봉을 벌면서, 이 길만 쭉 갈 줄 알았죠.<br /><br />
-    하지만 사업과 투자가 동시에 무너지면서,  
-    지금은 11평 원룸에서 다시 시작하고 있습니다.<br /><br />
-    이 페이지는<br />
-    <strong>0원에서 다시 수익 구조를 만드는 전 과정을 기록하는 퍼블릭 허브</strong>입니다.
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>11평에서 다시 시작한 남자 – 온라인 수익 허브</title>
 
-<!-- 📌 DAILY LOG (모바일 최적화 스크롤 박스) -->
-<section class="section">
-  <h2>✏️ 하루 기록</h2>
-  <p class="small">매일 실행한 내용을 기록합니다.</p>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text-main: #111111;
+      --text-sub: #555555;
+      --accent: #111111;
+      --border: #e2e2e7;
+    }
 
-  <!-- Scroll Box -->
-  <div style="
-      max-height: 200px;
-      overflow-y: auto;
-      padding: 14px;
-      background: #f9fafb;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 14px;
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 80px;
+    }
+
+    header {
+      padding: 24px 20px 32px;
+      margin-bottom: 24px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #111111, #3b3b3b);
+      color: #ffffff;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 0 0 16px;
+      color: #e5e5e5;
       line-height: 1.6;
-  ">
-    <ul style="margin:0; padding-left:18px;">
-      <li><strong>2025.11.26</strong> — 초록바 게임 광고 수정, 자동화 테스트 성공</li>
-      <li><strong>2025.11.25</strong> — 브이로그 템플릿 1차 구성 완성</li>
-      <li><strong>2025.11.24</strong> — 심리 릴스 3개 업로드 성공</li>
-      <li><strong>2025.11.23</strong> — 11평 사이트 레이아웃 개편 작업</li>
-      <li><strong>2025.11.22</strong> — 쿠팡 파트너스 수익 구조 테스트</li>
-      <li><strong>2025.11.21</strong> — GitHub 페이지 자동화 업데이트</li>
-    </ul>
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 24px;
+    }
+
+    .section {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 20px 18px;
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-sub);
+    }
+
+    .story-body {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f2f2f5;
+      color: #555;
+    }
+
+    .video-placeholder {
+      border-radius: 12px;
+      border: 1px dashed #d2d2d8;
+      padding: 20px;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .product-card {
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 12px 12px 14px;
+      background: #fafafa;
+      font-size: 13px;
+    }
+
+    .product-card h3 {
+      margin: 0 0 4px;
+      font-size: 14px;
+      color: #111;
+    }
+
+    .product-meta {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 6px;
+    }
+
+    .product-card a {
+      font-size: 12px;
+    }
+
+    .small {
+      font-size: 12px;
+      color: #777;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .wrap { padding: 20px 16px 60px; }
+      header { padding: 20px 16px 26px; }
+      header h1 { font-size: 22px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- HERO -->
+    <header>
+      <div class="badge">온라인 수익 다각화 / 25년 11월 15일 ~ ing </div>
+      <h1>11평에서 다시 시작한 남자</h1>
+      <p>
+        한때는 한 달에 남들 1년치 연봉을 벌었지만,<br />
+        지금은 11평 원룸에서 다시 온라인으로 다시 올라가는 과정을 기록합니다.
+      </p>
+      <div class="btn-row">
+        <a href="#story" class="btn">스토리 먼저 보기</a>
+        <a href="#products" class="btn-outline">실제 사용템 보기</a>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <!-- LEFT SIDE -->
+      <div>
+
+        <!-- STORY -->
+        <section id="story" class="section">
+          <h2>📘 왜 다시 시작하게 됐나</h2>
+          <div class="story-body">
+            결혼 전에는 사업도, 투자도, 재테크도 잘 굴러갔습니다.  
+            매달 왠만한 사람의 연봉을 벌면서, 이 길만 쭉 갈 줄 알았죠.<br /><br />
+            하지만 사업과 투자가 동시에 무너지면서,  
+            지금은 11평 원룸에서 다시 시작하고 있습니다.<br /><br />
+            이 페이지는<br />
+            <strong>0원에서 다시 수익 구조를 만드는 전 과정을 기록하는 퍼블릭 허브</strong>입니다.
+          </div>
+        </section>
+
+        <!-- DAILY LOG : 하루 기록 추가됨 -->
+        <section class="section">
+          <h2>✏️ 하루 기록</h2>
+          <p class="small">매일 실행한 내용을 간단하게 기록합니다.</p>
+
+          <div style="
+            background:#f9fafb;
+            border:1px solid var(--border);
+            padding:14px;
+            border-radius:10px;
+            margin-bottom:12px;
+            font-size:14px;
+          ">
+            오늘의 기록을 여기에 적어보세요. (수동 업데이트 영역)
+          </div>
+
+          <ul class="small" style="line-height:1.7; padding-left:18px;">
+            <li><strong>2025.11.26</strong> — 초록바 게임 광고 수정 완료. 자동화 테스트 성공.</li>
+            <li><strong>2025.11.25</strong> — 11평 브이로그 템플릿 1차 완성.</li>
+            <li><strong>2025.11.24</strong> — 심리 릴스 3개 업로드 성공.</li>
+          </ul>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="products" class="section">
+          <h2>🛒 11평 생활 · 작업 · 촬영템</h2>
+          
+          <p class="small">
+            아래 링크는 "쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+          </p>
+          <p class="small">제가 실제로 알뜰살뜰 써보고 도움됐던 제품만 추천합니다.</p>
+          <p class="small">위 수수료는 제가 웹페이지 운영을 하는데 많은 도움이 됩니다. 감사합니다.</p>
+
+          <div class="product-list">
+            <div class="product-card">
+              <h3>작업용 스탠드 조명</h3>
+              <div class="product-meta">방 분위기 & 촬영 퀄리티 동시에 업</div>
+              <p>야간 편집할 때 눈 피로 줄여주고, 브이로그 촬영에도 사용 중.</p>
+              <a href="쿠팡_링크_1" target="_blank" rel="noopener noreferrer">쿠팡에서 보기 →</a>
+            </div>
+
+            <div class="product-card">
+              <h3>11평 전용 수납함 세트</h3>
+              <div class="product-meta">좁은 공간 수납 최적화</div>
+              <p>계절 옷, 장비, 서류를 깔끔하게 넣어두는 용도.</p>
+              <a href="쿠팡_링크_2" target="_blank" rel="noopener noreferrer">쿠팡에서 보기 →</a>
+            </div>
+
+            <div class="product-card">
+              <h3>작은 책상 + 접이식 의자</h3>
+              <div class="product-meta">작업 & 식사 겸용</div>
+              <p>하루 대부분을 보내는 공간. 좁은 원룸에 꼭 맞는 사이즈.</p>
+              <a href="쿠팡_링크_3" target="_blank" rel="noopener noreferrer">쿠팡에서 보기 →</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div>
+
+        <!-- VIDEO -->
+        <section class="section">
+          <h2>🎥 영상 – 온라인 수익 실험 브이로그</h2>
+
+          <div class="video-placeholder">
+            <iframe 
+              width="100%" 
+              height="315"
+              src="https://www.youtube.com/embed/w88WMU50V2U?si=fawuwVAxBmV6gZTI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+
+        <!-- QUICK LINKS -->
+        <section class="section">
+          <h2>🔗 빠른 이동</h2>
+          <ul class="small">
+            <li>온라인 수익 0 → 30만원 프로젝트 로그</li>
+            <li>쿠팡 파트너스 자동화 실험 기록</li>
+            <li>쇼츠·릴스 실험 노트</li>
+          </ul>
+          <div class="tag-list">
+            <span class="tag">#11평에서다시시작</span>
+            <span class="tag">#퍼블릭빌딩</span>
+            <span class="tag">#온라인수익실험실</span>
+          </div>
+        </section>
+
+        <!-- COUPANG DYNAMIC BANNER -->
+        <section class="section">
+          <h2>🛍 자동 추천 상품</h2>
+          <p class="small">쿠팡 파트너스 자동 추천 배너입니다.</p>
+
+          <script src="https://ads-partners.coupang.com/g.js"></script>
+          <script>
+            new PartnersCoupang.G({
+              "id": 944627,
+              "template": "carousel",
+              "trackingCode": "AF5786108",
+              "width": "680",
+              "height": "200",
+              "tsource": ""
+            });
+          </script>
+        </section>
+
+        <!-- AUTO LIST FUTURE -->
+        <section class="section">
+          <h2>🧩 자동 업데이트 리스트(예정)</h2>
+          <p class="small">
+            Google Sheets + 스크립트로<br />
+            <strong>가격 변동 / 할인 / 인기템</strong>이 자동 업데이트될 예정입니다.
+          </p>
+        </section>
+
+      </div>
+    </div>
+
+    <footer>
+      © 11평에서 다시 시작한 남자 · Online Income Lab
+    </footer>
   </div>
-
-  <!-- 작성 안내 -->
-  <p class="small" style="margin-top:10px; color:#888;">
-    ※ 위 기록은 직접 HTML에서 수정하며 업데이트합니다.
-  </p>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products" class="section">
-  <h2>🛒 11평 생활 · 작업 · 촬영템</h2>
-  
-  <p class="small">
-    아래 링크는 "쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
-  </p>
-  <p class="small">제가 실제로 알뜰살뜰 써보고 도움됐던 제품만 추천합니다.</p>
-  <p class="small">위 수수료는 제가 웹페이지 운영을 하는데 많은 도움이 됩니다. 감사합니다.</p>
-
-  <div class="product-list">
-    <div class="product-card">
-      <h3>작업용 스탠드 조명</h3>
-      <div class="product-meta">방 분위기 & 촬영 퀄리티 동시에 업</div>
-      <p>야간 편집할 때 눈 피로 줄여주고, 브이로그 촬영에도 사용 중.</p>
-      <a href="쿠팡_링크_1" target="_blank" rel="noopener noreferrer">쿠팡에서 보기 →</a>
-    </div>
-
-    <div class="product-card">
-      <h3>11평 전용 수납함 세트</h3>
-      <div class="product-meta">좁은 공간 수납 최적화</div>
-      <p>계절 옷, 장비, 서류를 깔끔하게 넣어두는 용도.</p>
-      <a href="쿠팡_링크_2" target="_blank" rel="noopener noreferrer">쿠팡에서 보기 →</a>
-    </div>
-
-    <div class="product-card">
-      <h3>작은 책상 + 접이식 의자</h3>
-      <div class="product-meta">작업 & 식사 겸용</div>
-      <p>하루 대부분을 보내는 공간. 좁은 원룸에 꼭 맞는 사이즈.</p>
-      <a href="쿠팡_링크_3" target="_blank" rel="noopener noreferrer">쿠팡에서 보기 →</a>
-    </div>
-  </div>
-</section>
+</body>
+</html>
